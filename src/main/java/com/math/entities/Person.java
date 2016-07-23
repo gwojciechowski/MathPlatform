@@ -5,12 +5,12 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name = "USER")
-public class User {
+@Table(name = "PERSON")
+public class Person {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "UserSeqGen")
-    @SequenceGenerator(name = "UserSeqGen", sequenceName = "user_seq", allocationSize = 1)
-    @Column(name = "user_id")
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "PersonSeqGen")
+    @SequenceGenerator(name = "PersonSeqGen", sequenceName = "person_seq", allocationSize = 1)
+    @Column(name = "person_id")
     private Long id;
     @Column(name = "name")
     private String name;
@@ -26,28 +26,20 @@ public class User {
     private String authToken;
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "person_id")
     private Set<Role> roles = new HashSet<>();
-
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(
-            name = "USER_GROUP",
-            joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "user_id")},
-            inverseJoinColumns = {@JoinColumn(name = "group_id", referencedColumnName = "group_id")}
-    )
-    private Set<Group> groups = new HashSet<>();
 
     public enum Status {
         REGISTERED,
         ACTIVE
     }
 
-    public User() {
+    public Person() {
 
     }
 
-    public User(Long id, String name, String email, String surname, String password, String status, String authToken,
-                Set<Role> roles, Set<Group> groups) {
+    public Person(Long id, String name, String email, String surname, String password, String status, String authToken,
+                  Set<Role> roles) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -56,7 +48,6 @@ public class User {
         this.status = status;
         this.authToken = authToken;
         this.roles = roles;
-        this.groups = groups;
     }
 
     public Long getId() {
@@ -123,17 +114,9 @@ public class User {
         this.authToken = authToken;
     }
 
-    public Set<Group> getGroups() {
-        return groups;
-    }
-
-    public void setGroups(Set<Group> groups) {
-        this.groups = groups;
-    }
-
     @Override
     public String toString() {
-        return "User{" +
+        return "Person{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
@@ -142,7 +125,6 @@ public class User {
                 ", status='" + status + '\'' +
                 ", authToken='" + authToken + '\'' +
                 ", roles=" + roles +
-                ", groups=" + groups +
                 '}';
     }
 }
