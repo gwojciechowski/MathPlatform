@@ -6,6 +6,8 @@
 </head>
 <body>
 
+Aby uzyskać dostęp do zawartości strony - musisz być zalogowany
+
 <div class="login-page">
     <div class="form">
         <form class="register-form">
@@ -16,7 +18,7 @@
             <p class="message"> Jesteś zarejestrowany? <a href="#"> Zaloguj się</a></p>
         </form>
         <form th:action="@{/login}" method="post" class="login-form">
-            <input type="text" name="username" placeholder="użytkownik"/>
+            <input type="text" name="username" placeholder="email"/>
             <input type="password" name="password" placeholder="hasło"/>
             <button type="submit">zaloguj</button>
             <p class="message">Nie jesteś zarejestrowany? <a href="#"> Utwórz konto</a> </p>
