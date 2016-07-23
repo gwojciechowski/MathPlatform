@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $.ajax({
-        url: "/currentUser"
+        url: "/currentPerson"
     }).then(function(data) {
        $('.name').append(data.name);
     });

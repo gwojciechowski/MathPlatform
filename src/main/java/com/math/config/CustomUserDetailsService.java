@@ -1,7 +1,7 @@
 package com.math.config;
 
 import com.math.entities.Person;
-import com.math.service.PersonService;
+import com.math.services.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

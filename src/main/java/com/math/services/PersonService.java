@@ -1,4 +1,4 @@
-package com.math.service;
+package com.math.services;
 
 import com.math.repositories.PersonRepository;
 import com.math.entities.Person;
