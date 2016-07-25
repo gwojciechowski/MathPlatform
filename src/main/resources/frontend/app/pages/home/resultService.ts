@@ -4,6 +4,7 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class ResultService {
+
   http: Http;
 
   constructor(http: Http) {
@@ -11,8 +12,23 @@ export class ResultService {
   }
 
   getDick() {
-    return this.http
-      .get('http://localhost:8080/section/basic/romanToArabic')
+    return this.http.get('http://localhost:8080/section/basic/romanToArabic')
       .map(res => res.json());
   }
+
+    getPost() {
+
+    var json=JSON.stringify({input: '1234'});
+        var params = json;
+        console.log(params);
+
+    var headers = new  Headers();
+                    headers.append('Content-Type', 'application/json');
+
+      return this.http
+        .post('http://localhost:8080/section/basic/arabicToRoman', params,{
+                                        headers: headers
+                                    })
+        .map(res => res.json());
+    }
 }
