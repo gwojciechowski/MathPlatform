@@ -1,0 +1,73 @@
+<ion-header>
+
+  <!--<ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>
+      Page Title
+    </ion-title>
+
+    <ion-buttons end>
+      <button (click)="openModal()">
+        <ion-icon name="options"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>-->
+
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Math Platform</ion-title>
+    
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="getting-started">
+
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>Arabic Number</ion-label>
+      <ion-input type="number" [(ngModel)]='arabicNumber'></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div padding>
+    <button primary block (click)="sendArabicToRoman(arabicNumber)">Oblicz</button>
+  </div>
+
+  Wynik:
+  <p>
+    {{dicksonPost.roman}}
+  </p>
+
+  <br><br>
+
+    <ion-list>
+    <ion-item>
+      <ion-label stacked>Roman Number</ion-label>
+      <ion-input type="text" [(ngModel)]='romanNumber'></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div padding>
+    <button primary block (click)="sendRomanToArabic(romanNumber)">Oblicz</button>
+  </div>
+
+  Wynik:
+  <p>
+    {{dicksonPost_2.number}}
+  </p>
+
+<ion-card-content>
+  <button [navPush]="aboutPage">Go To About</button>
+</ion-card-content>
+
+</ion-content>
+
+
+
+

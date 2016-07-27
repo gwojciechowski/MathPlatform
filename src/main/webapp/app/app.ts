@@ -5,7 +5,7 @@ import {HomePage} from './pages/home/home';
 
 
 @Component({
-  template: '<ion-nav [root]="rootPage"></ion-nav>'
+  template: '<ion-nav id="nav" [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'
 })
 export class MyApp {
   rootPage: any = HomePage;
