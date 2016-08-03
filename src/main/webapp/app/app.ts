@@ -2,25 +2,25 @@ import {Component, ViewChild} from '@angular/core';
 import {ionicBootstrap, Platform, Nav} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 
-import {UsersPage} from './pages/users/users';
-import {ReposPage} from './pages/repos/repos';
-import {OrganizationsPage} from './pages/organizations/organizations'
+import {BasicPage} from './pages/basic/basic';
+import {StatisticPage} from './pages/statistic/statistic';
+import {FunctionPage} from './pages/function/function'
 
 @Component({
   templateUrl: 'build/app.html'
 })
 class MyApp {
 @ViewChild(Nav) nav: Nav;
-rootPage: any = UsersPage;
+rootPage: any = BasicPage;
 pages: Array<{title: string, component: any}>;
 
 constructor(private platform: Platform) {
     this.initializeApp();
 
     this.pages = [
-      { title: 'Users', component: UsersPage },
-      { title: 'Repos', component: ReposPage },
-      { title: 'Organizations', component: OrganizationsPage }
+      { title: 'Basic Expressions', component: BasicPage },
+      { title: 'Statistic Elements', component: StatisticPage },
+      { title: 'Functions', component: FunctionPage }
     ];
   }
 

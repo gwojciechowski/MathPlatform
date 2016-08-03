@@ -2,15 +2,15 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 /*
-  Generated class for the ReposPage page.
+  Generated class for the BasicPage page.
 
   See http://ionicframework.com/docs/v2/components/#navigation for more info on
   Ionic pages and navigation.
 */
 @Component({
-  templateUrl: 'build/pages/repos/repos.html',
+  templateUrl: 'build/pages/basic/basic.html',
 })
-export class ReposPage {
+export class BasicPage {
 
   constructor(private nav: NavController) {
 
