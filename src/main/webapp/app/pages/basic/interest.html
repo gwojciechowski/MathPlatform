@@ -1,0 +1,39 @@
+<!--
+  Generated template for the InterestPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Interest Capitalization</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="getting-started">
+
+<ion-item>
+    <ion-input type="number" placeholder="initialCapital" [(ngModel)]='initialCapital'></ion-input>
+</ion-item>
+
+<ion-item>
+    <ion-input type="number" placeholder="interestRate" [(ngModel)]='interestRate'></ion-input>
+</ion-item>
+
+<ion-item>
+    <ion-input type="number" placeholder="amountOfInterest" [(ngModel)]='amountOfInterest'></ion-input>
+</ion-item>
+
+  <div padding>
+    <button primary block (click)="sendInterestCapitalization(initialCapital, interestRate, amountOfInterest)">Calculate</button>
+  </div>
+
+  Result:
+  <p>
+    {{interestResult.result}}
+  </p>
+
+</ion-content>

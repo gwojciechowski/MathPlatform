@@ -37,18 +37,18 @@ public class BasicExpressionsController implements Serializable {
         return new PrimeFactorsDTO(basicExpressionsService.primeFactors(dto.getNumber()));
     }
 
-    @RequestMapping(value = "nwd", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE,
+    @RequestMapping(value = "gcd", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public NaturalNumberDTO nwd(@RequestBody NwdDTO dto) {
-        return new NaturalNumberDTO(basicExpressionsService.nwd(dto.getA(), dto.getB()));
+    public NaturalNumberDTO gcd(@RequestBody GcdDTO dto) {
+        return new NaturalNumberDTO(basicExpressionsService.gcd(dto.getA(), dto.getB()));
     }
 
-    @RequestMapping(value = "nww", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE,
+    @RequestMapping(value = "lcm", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public NaturalNumberDTO nww(@RequestBody NwwDTO dto) {
-        return new NaturalNumberDTO(basicExpressionsService.nww(dto.getA(), dto.getB()));
+    public NaturalNumberDTO lcm(@RequestBody LcmDTO dto) {
+        return new NaturalNumberDTO(basicExpressionsService.lcm(dto.getA(), dto.getB()));
     }
 
     // removal of the irrationality of the denominator

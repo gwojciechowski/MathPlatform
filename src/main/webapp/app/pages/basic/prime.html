@@ -9,18 +9,15 @@
     <button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Prime Page</ion-title>
+    <ion-title>Prime Factorization</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding class="getting-started">
 
-  <ion-list>
-    <ion-item>
-      <ion-label stacked>Number</ion-label>
-      <ion-input type="number" [(ngModel)]='primeNumber'></ion-input>
-    </ion-item>
-  </ion-list>
+  <ion-item>
+    <ion-input type="number" placeholder="Number" [(ngModel)]='primeNumber'></ion-input>
+  </ion-item>
 
   <div padding>
     <button primary block (click)="sendPrimeFactors(primeNumber)">Calculate</button>

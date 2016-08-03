@@ -9,18 +9,16 @@
     <button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Conversion Page</ion-title>
+    <ion-title>Conversion Numbers</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding class="getting-started">
+ Convert Arabic to Roman
 
-  <ion-list>
-    <ion-item>
-      <ion-label stacked>Arabic Number</ion-label>
-      <ion-input type="number" [(ngModel)]='arabicNumber'></ion-input>
-    </ion-item>
-  </ion-list>
+  <ion-item>
+    <ion-input type="number" placeholder="Arabic Number" [(ngModel)]='arabicNumber'></ion-input>
+  </ion-item>
 
   <div padding>
     <button primary block (click)="sendArabicToRoman(arabicNumber)">Calculate</button>
@@ -33,12 +31,11 @@
 
   <br><br>
 
-    <ion-list>
-    <ion-item>
-      <ion-label stacked>Roman Number</ion-label>
-      <ion-input type="text" [(ngModel)]='romanNumber'></ion-input>
-    </ion-item>
-  </ion-list>
+ Convert Roman to Arabic
+
+  <ion-item>
+    <ion-input type="text" placeholder="Roman Number" [(ngModel)]='romanNumber'></ion-input>
+  </ion-item>
 
   <div padding>
     <button primary block (click)="sendRomanToArabic(romanNumber)">Calculate</button>

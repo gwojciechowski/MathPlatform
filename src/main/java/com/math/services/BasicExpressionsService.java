@@ -2,7 +2,6 @@ package com.math.services;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -71,7 +70,7 @@ public class BasicExpressionsService {
         return factors;
     }
 
-    public int nwd(int a, int b) {
+    public int gcd(int a, int b) {
         while (a != b){
             if (a > b)
                 a -= b;
@@ -81,8 +80,8 @@ public class BasicExpressionsService {
         return a;
     }
 
-    public int nww(int a, int b) {
-        return ((a*b)/nwd(a, b));
+    public int lcm(int a, int b) {
+        return ((a*b)/ gcd(a, b));
     }
 
     public Double relativeError(Double exactValue, Double estimatedValue) {
