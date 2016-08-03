@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { ConversionPage } from './conversion';
+import { PrimePage } from './prime';
+
 
 /*
   Generated class for the BasicPage page.
@@ -12,8 +15,10 @@ import { NavController } from 'ionic-angular';
 })
 export class BasicPage {
 
-  constructor(private nav: NavController) {
+  conversionPage = ConversionPage;
+  primePage = PrimePage;
 
+  constructor(private nav: NavController) {
   }
 
 }
