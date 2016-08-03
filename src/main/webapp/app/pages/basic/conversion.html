@@ -6,23 +6,35 @@
 -->
 <ion-header>
   <ion-navbar>
-    <button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
+    <ion-buttons start>
+      <button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
     <ion-title>Conversion Numbers</ion-title>
+    <ion-buttons end>
+        <button royal>
+      <ion-icon name='search'></ion-icon>
+    </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding class="getting-started">
+    <button block outline (click)="showToast('top')">
+      <ion-icon name='information-circle' is-active="false"></ion-icon>
+      Information
+    </button>
+
+    <br><br>
+
  Convert Arabic to Roman
 
   <ion-item>
     <ion-input type="number" placeholder="Arabic Number" [(ngModel)]='arabicNumber'></ion-input>
   </ion-item>
-
-  <div padding>
-    <button primary block (click)="sendArabicToRoman(arabicNumber)">Calculate</button>
-  </div>
+<br>
+    <button block (click)="sendArabicToRoman(arabicNumber)">Calculate</button>
 
   Result:
   <p>
@@ -36,10 +48,8 @@
   <ion-item>
     <ion-input type="text" placeholder="Roman Number" [(ngModel)]='romanNumber'></ion-input>
   </ion-item>
-
-  <div padding>
-    <button primary block (click)="sendRomanToArabic(romanNumber)">Calculate</button>
-  </div>
+<br>
+    <button block (click)="sendRomanToArabic(romanNumber)">Calculate</button>
 
   Result:
   <p>

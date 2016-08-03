@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, Toast } from 'ionic-angular';
 import { ResultService } from './resultService';
 
 /*
@@ -33,6 +33,16 @@ export class ConversionPage {
     this.resultService.romanToArabic(romanNumber).subscribe(res => {
       this.arabicResult = res;
     })
+  }
+
+  showToast(position: string) {
+    let toast = Toast.create({
+      message: 'This module allows the conversion of numeral systems',
+      duration: 6000,
+      position: position
+    });
+
+    this.navCtrl.present(toast);
   }
 
 }
