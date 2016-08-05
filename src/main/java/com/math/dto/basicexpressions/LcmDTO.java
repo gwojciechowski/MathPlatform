@@ -2,14 +2,14 @@ package com.math.dto.basicexpressions;
 
 import java.io.Serializable;
 
-public class NwdDTO implements Serializable{
+public class LcmDTO implements Serializable {
     private int a;
     private int b;
 
-    public NwdDTO() {
+    public LcmDTO() {
     }
 
-    public NwdDTO(int a, int b) {
+    public LcmDTO(int a, int b) {
         this.a = a;
         this.b = b;
     }
@@ -32,7 +32,7 @@ public class NwdDTO implements Serializable{
 
     @Override
     public String toString() {
-        return "NwdDTO{" +
+        return "LcmDTO{" +
                 "a=" + a +
                 ", b=" + b +
                 '}';
