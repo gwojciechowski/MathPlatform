@@ -4,7 +4,9 @@ import {StatusBar} from 'ionic-native';
 
 import {BasicPage} from './pages/basic/basic';
 import {StatisticPage} from './pages/statistic/statistic';
-import {FunctionPage} from './pages/function/function'
+import {FunctionPage} from './pages/function/function';
+
+declare var algebra: any;
 
 @Component({
   templateUrl: 'build/app.html'
@@ -22,6 +24,11 @@ constructor(private platform: Platform) {
       { title: 'Statistic Elements', component: StatisticPage },
       { title: 'Functions', component: FunctionPage }
     ];
+    var expr = new algebra.Expression("x");
+expr = expr.subtract(3);
+expr = expr.add("x");
+
+console.log(expr.toString());
   }
 
 initializeApp() {
