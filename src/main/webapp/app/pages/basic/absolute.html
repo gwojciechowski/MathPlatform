@@ -34,20 +34,8 @@
     <button primary block (click)="sendAbsoluteError(exactValue, relativeError)">Calculate</button>
   </div>
 
-  <ion-item>
-    <ion-input placeholder="relativeError" [(ngModel)]='kokonut'></ion-input>
-  </ion-item>
-    <div padding>
-    <button primary block (click)="kutas(kokonut)">Calculate</button>
-  </div>
-
-
   Result:
   <p>
     {{absoluteResult.result}}
   </p>
-
-  {{absoluteLatex}}
-  <div #dupa>ddd</div>
-
 </ion-content>
