@@ -7,6 +7,7 @@ import {StatisticPage} from './pages/statistic/statistic';
 import {FunctionPage} from './pages/function/function';
 
 declare var algebra: any;
+declare var katex: any;
 
 @Component({
   templateUrl: 'build/app.html'
@@ -25,10 +26,12 @@ constructor(private platform: Platform) {
       { title: 'Functions', component: FunctionPage }
     ];
     var expr = new algebra.Expression("x");
-expr = expr.subtract(3);
-expr = expr.add("x");
+    expr = expr.subtract(3);
+    expr = expr.add("x");
 
-console.log(expr.toString());
+    var html = katex.renderToString("c = \\pm\\sqrt{a^2 + b^2}");
+
+    console.log(expr.toString());
   }
 
 initializeApp() {

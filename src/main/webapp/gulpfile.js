@@ -66,7 +66,7 @@ gulp.task('build', ['clean'], function(done){
 });
 
 gulp.task('extlibs', function() {
-    return gulp.src(['www/extlibs/algebra-0.2.5.min.js'])
+    return gulp.src(['www/extlibs/algebra-0.2.5.min.js', 'node_modules/katex/dist/katex.min.js'])
         .pipe(gulpConcat('external-libraries.js'))
         .pipe(gulp.dest('www/build/js'));
 });
