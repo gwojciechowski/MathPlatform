@@ -1,0 +1,39 @@
+<!--
+  Generated template for the VariancePage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    </ion-buttons>
+    <ion-title>Variance and Standard Deviation</ion-title>
+    <ion-buttons end>
+      <button royal>
+        <ion-icon name='search'></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="getting-started">
+
+  <ion-item>
+    <ion-input type="number" placeholder="Number" [(ngModel)]='varianceNumber'></ion-input>
+  </ion-item>
+
+  <div padding>
+    <button primary block (click)="sendVariance(varianceNumber)">Calculate</button>
+  </div>
+
+  Result:
+  <p>
+    {{varianceResult.variance}}
+    {{varianceResult.standardDeviation}}
+  </p>
+
+</ion-content>

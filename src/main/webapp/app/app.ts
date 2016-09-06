@@ -6,9 +6,6 @@ import {BasicPage} from './pages/basic/basic';
 import {StatisticPage} from './pages/statistic/statistic';
 import {FunctionPage} from './pages/function/function';
 
-declare var algebra: any;
-declare var katex: any;
-
 @Component({
   templateUrl: 'build/app.html'
 })
@@ -25,13 +22,6 @@ constructor(private platform: Platform) {
       { title: 'Statistic Elements', component: StatisticPage },
       { title: 'Functions', component: FunctionPage }
     ];
-    var expr = new algebra.Expression("x");
-    expr = expr.subtract(3);
-    expr = expr.add("x");
-
-    var html = katex.renderToString("c = \\pm\\sqrt{a^2 + b^2}");
-
-    console.log(expr.toString());
   }
 
 initializeApp() {

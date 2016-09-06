@@ -1,4 +1,4 @@
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 declare var algebra: any;
@@ -15,17 +15,13 @@ declare var katex: any;
   templateUrl: 'build/pages/function/zero.html',
 })
 
-export class ZeroPage implements AfterViewInit{
-    @ViewChild('result') result: any;
-    @ViewChild('latex') latex: any;
+export class ZeroPage {
+  @ViewChild('result') result: any;
+  @ViewChild('latex') latex: any;
 
-    private equations: any;
-  
+  private equations: any;
+
   constructor(private navCtrl: NavController) {
-  }
-
-    ngAfterViewInit() {
-      // katex.render("c = \\pm\\sqrt{a^2 + b^2}", this.dupa.nativeElement);
   }
 
   showLatex(equations) {

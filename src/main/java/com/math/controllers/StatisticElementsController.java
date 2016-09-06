@@ -2,6 +2,7 @@ package com.math.controllers;
 
 import com.math.dto.RationalNumberDTO;
 import com.math.dto.statisticelement.RationalNumbersDTO;
+import com.math.dto.statisticelement.VarianceDTO;
 import com.math.services.StatisticElementsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -23,12 +24,17 @@ public class StatisticElementsController implements Serializable {
         return new RationalNumberDTO(statisticElementsService.arithmeticAverage(dto.getNumbers()));
     }
 
-    // weighted average
-
     @RequestMapping(value = "median", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public RationalNumberDTO median(@RequestBody RationalNumbersDTO dto) {
         return new RationalNumberDTO(statisticElementsService.median(dto.getNumbers()));
+    }
+
+    @RequestMapping(value = "varianceAndDeviation", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public VarianceDTO varianceAndDeviation(@RequestBody RationalNumbersDTO dto) {
+        return statisticElementsService.varianceAndDeviation(dto.getNumbers());
     }
 }
