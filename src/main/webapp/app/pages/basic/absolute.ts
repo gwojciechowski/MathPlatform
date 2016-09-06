@@ -14,9 +14,11 @@ import { ResultService } from './resultService';
   providers: [ResultService]
 })
 
+
 export class AbsolutePage {
   public resultService: ResultService;
   private absoluteResult: any;
+  private absoluteLatex: any;
   
   constructor(private navCtrl: NavController, resultService: ResultService) {
     this.resultService = resultService;

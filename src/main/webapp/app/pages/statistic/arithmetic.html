@@ -1,5 +1,5 @@
 <!--
-  Generated template for the AbsolutePage page.
+  Generated template for the ArithmeticPage page.
 
   See http://ionicframework.com/docs/v2/components/#navigation for more info on
   Ionic pages and navigation.
@@ -11,7 +11,7 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     </ion-buttons>
-    <ion-title>Absolute Error</ion-title>
+    <ion-title>Arithmetic Average</ion-title>
     <ion-buttons end>
       <button royal>
         <ion-icon name='search'></ion-icon>
@@ -23,19 +23,16 @@
 <ion-content padding class="getting-started">
 
   <ion-item>
-    <ion-input type="number" placeholder="exactValue" [(ngModel)]='exactValue'></ion-input>
-  </ion-item>
-
-    <ion-item>
-    <ion-input type="number" placeholder="relativeError" [(ngModel)]='relativeError'></ion-input>
+    <ion-input type="number" placeholder="Number" [(ngModel)]='arithmeticNumber'></ion-input>
   </ion-item>
 
   <div padding>
-    <button primary block (click)="sendAbsoluteError(exactValue, relativeError)">Calculate</button>
+    <button primary block (click)="sendArithmeticAverage(arithmeticNumber)">Calculate</button>
   </div>
 
   Result:
   <p>
-    {{absoluteResult.result}}
+    {{arithmeticResult.result}}
   </p>
+
 </ion-content>

@@ -4,7 +4,7 @@ import {StatusBar} from 'ionic-native';
 
 import {BasicPage} from './pages/basic/basic';
 import {StatisticPage} from './pages/statistic/statistic';
-import {FunctionPage} from './pages/function/function'
+import {FunctionPage} from './pages/function/function';
 
 @Component({
   templateUrl: 'build/app.html'

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { ZeroPage } from './zero';
 
 /*
   Generated class for the FunctionPage page.
@@ -11,6 +12,8 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'build/pages/function/function.html',
 })
 export class FunctionPage {
+
+  zeroPage = ZeroPage;
 
   constructor(private nav: NavController) {
 
