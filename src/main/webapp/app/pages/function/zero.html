@@ -5,11 +5,8 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     </ion-buttons>
-    <ion-title>Zero Function</ion-title>
+    <ion-title>Simply Equations</ion-title>
     <ion-buttons end>
-      <button royal>
-        <ion-icon name='search'></ion-icon>
-      </button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
@@ -17,11 +14,11 @@
 <ion-content padding class="getting-started">
 
   <ion-item>
-    <ion-input placeholder="equations" [(ngModel)]='equations'></ion-input>
+    <ion-input placeholder="Equations with x" [(ngModel)]='equations'></ion-input>
   </ion-item>
 
   <div padding>
-    <button primary block (click)="showLatex(equations)">ShowLaTex</button>
+    <button primary block (click)="showLatex(equations)">Show LaTex</button>
   </div>
 
   <div padding #latex></div>
