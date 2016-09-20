@@ -11,40 +11,41 @@ export class StatisticService {
     this.http = http;
   }
 
-  arithmeticAverage(trolo) {
+  arithmeticAverage(numbers) {
 
-    var params = JSON.stringify({number: trolo});
+    var params = JSON.stringify({numbers: numbers});
+    console.log(params);
     var headers = new  Headers();
                     headers.append('Content-Type', 'application/json');
 
       return this.http
-        .post('http://localhost:8080/section/basic/arabicToRoman', params,{
+        .post('http://localhost:8080/section/statistic/arithmeticAverage', params,{
                                         headers: headers
                                     })
         .map(res => res.json());
     }
 
-  median(trolo) {
+  median(numbers) {
 
-    var params = JSON.stringify({number: trolo});
+    var params = JSON.stringify({numbers: numbers});
     var headers = new  Headers();
                     headers.append('Content-Type', 'application/json');
 
       return this.http
-        .post('http://localhost:8080/section/basic/arabicToRoman', params,{
+        .post('http://localhost:8080/section/statistic/median', params,{
                                         headers: headers
                                     })
         .map(res => res.json());
     }
 
-  variance(trolo) {
+  variance(numbers) {
 
-    var params = JSON.stringify({number: trolo});
+    var params = JSON.stringify({numbers: numbers});
     var headers = new  Headers();
                     headers.append('Content-Type', 'application/json');
 
       return this.http
-        .post('http://localhost:8080/section/basic/arabicToRoman', params,{
+        .post('http://localhost:8080/section/statistic/varianceAndDeviation', params,{
                                         headers: headers
                                     })
         .map(res => res.json());

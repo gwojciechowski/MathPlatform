@@ -20,17 +20,15 @@
 <ion-content padding class="getting-started">
 
   <ion-item>
-    <ion-input type="number" placeholder="Number" [(ngModel)]='varianceNumber'></ion-input>
+    <ion-input placeholder="Number" [(ngModel)]='varianceNumber'></ion-input>
   </ion-item>
 
   <div padding>
     <button primary block (click)="sendVariance(varianceNumber)">Calculate</button>
   </div>
-
-  Result:
   <p>
-    {{varianceResult.variance}}
-    {{varianceResult.standardDeviation}}
+    Variance: {{varianceResult.variance}} <br>
+    Standard Deviation: {{varianceResult.standardDeviation}}
   </p>
 
 </ion-content>

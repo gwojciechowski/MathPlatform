@@ -23,8 +23,9 @@ export class MedianPage {
     this.medianResult = '';
   }
 
-  sendMedian(medianNumber: number){
-    this.statisticService.median(medianNumber).subscribe(res => {
+  sendMedian(medianNumber: string){
+    var medianNumberArray = medianNumber.split(',').map(Number);
+    this.statisticService.median(medianNumberArray).subscribe(res => {
       this.medianResult = res;
     })
   }

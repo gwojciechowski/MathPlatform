@@ -23,8 +23,9 @@ export class VariancePage {
     this.varianceResult = '';
   }
 
-  sendVariance(varianceNumber: number){
-    this.statisticService.variance(varianceNumber).subscribe(res => {
+  sendVariance(varianceNumber: string){
+    var varianceNumberArray = varianceNumber.split(',').map(Number);
+    this.statisticService.variance(varianceNumberArray).subscribe(res => {
       this.varianceResult = res;
     })
   }

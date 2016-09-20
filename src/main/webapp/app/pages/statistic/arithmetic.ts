@@ -23,8 +23,9 @@ export class ArithmeticPage {
     this.arithmeticResult = '';
   }
 
-  sendArithmeticAverage(arithmeticNumber: number){
-    this.statisticService.arithmeticAverage(arithmeticNumber).subscribe(res => {
+  sendArithmeticAverage(arithmeticNumber: string){
+    var arithmeticNumberArray = arithmeticNumber.split(',').map(Number);
+    this.statisticService.arithmeticAverage(arithmeticNumberArray).subscribe(res => {
       this.arithmeticResult = res;
     })
   }
