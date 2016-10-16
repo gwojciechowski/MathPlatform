@@ -1,6 +1,6 @@
 # MathPlatform - PROJECT SUSPENDED :(
 
-An application to solve mathematical problems. The basic version includes three sections - Function, Statistic Element and Basic Expressions. You can solve equations or calculate simple mathematical operations! The application uses an external API that allows you to solve algebraic equations and present solution in LateX.
+An application for solving mathematical problems. The basic version includes three sections - Function, Statistic Element and Basic Expressions. You can solve equations or calculate simple mathematical operations! The application uses an external API that allows you to solve algebraic equations and present solution in LateX.
 
 ### Technology:
   - Java 8
